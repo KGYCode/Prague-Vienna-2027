@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#081623">
+  <title>Prague &amp; Vienna 2027 · Jan 1–8</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><span class="logo">✦</span><div><strong>PRAGUE &amp; VIENNA 2027</strong><span>PRAGUE → VIENNA / JAN 1–8</span></div></div>
+    <div class="top-actions"><span id="pageCount" class="count">여행 개요</span><button id="btnOverview" class="btn secondary">전체 일정</button><button id="btnTodo" class="btn primary" aria-expanded="false">예약 TODO ↗</button></div>
+  </header>
+  <main id="overall" class="overall"></main>
+  <main id="slide" class="slide hidden">
+    <div class="frame">
+      <section class="left">
+        <div class="day-kicker"><span id="date"></span> <span style="opacity:.35">/</span> <span id="area"></span></div>
+        <h1 id="headline" class="heading"></h1>
+        <p id="caption" class="caption"></p>
+        <div class="hero"><img id="heroImage" alt=""><span id="heroBadge" class="hero-badge"></span></div>
+        <a id="heroCredit" class="photo-credit" target="_blank" rel="noopener">대표 사진 출처</a>
+        <div class="minor">DAY ROUTE · VISIT ORDER</div>
+        <div id="stops" class="stops"></div>
+        <div class="overnight" id="overnight"></div>
+      </section>
+      <section class="map-side" aria-label="동선 지도">
+        <div class="map" id="map"></div>
+        <div class="map-top"><b>이동 수단</b><div class="modes" id="mapMode"></div></div>
+        <div class="map-note"><b>지도 안내</b> · 선택한 장소의 위치만 표시합니다. 지도에 경로선이나 이동수단을 그리지 않습니다. 지도가 차단되면 ‘Google Maps에서 크게 열기’를 이용하세요.</div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><span class="copy-note">← → 키로 넘기기 · 사진/지도는 인터넷 연결 필요</span><div class="ticks" id="ticks"></div><div class="footer-controls"><button id="btnPrev" class="btn">← 이전</button><button id="btnNext" class="btn primary">다음 →</button></div></footer>
+</div>
+<div class="modal-cover" id="shade"></div>
+<aside class="drawer" id="drawer" aria-label="예약과 준비 체크리스트"><div style="display:flex;align-items:center;justify-content:space-between;gap:20px"><h2>예약 및 준비 TODO</h2><button class="btn" id="btnClose">닫기 ✕</button></div><p>호텔·항공·활동 예약이 필요한 항목입니다. 체크한 상태는 이 브라우저에만 저장되며 공유 파일 자체의 원본 데이터는 변경하지 않습니다.</p><div id="todoContainer"></div></aside>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
