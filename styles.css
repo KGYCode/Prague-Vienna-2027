@@ -42,3 +42,10 @@
 .alternatives summary{cursor:pointer;color:var(--text)}
 .alternatives li{margin:.5rem 0}
 @media(min-width:900px){.trip-progress-line{grid-template-columns:repeat(8,minmax(0,1fr))}}
+
+.drawer:not(.open){visibility:hidden}
+@media(max-width:600px){
+  .footer{flex-wrap:wrap;justify-content:center}
+  .footer .copy-note{display:none}
+  .footer .ticks{flex:1 0 100%;margin:4px 0}
+}
